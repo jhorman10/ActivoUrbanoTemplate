@@ -1,0 +1,672 @@
+<!--NavBar-->
+<section>
+  <div>
+    <app-header></app-header>
+  </div>
+</section>
+
+<!--Sliders-->
+<section id="home" class="container-fluid hide-on-med-and-down" style="margin-top: -90px;">
+  <div class="carousel carousel-slider relativo hide-on-med-and-down">
+    <a class="carousel-item" href="#one!"><img class="responsive-img"
+        src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg"></a>
+    <a class="carousel-item" href="#two!"><img class="responsive-img"
+        src="https://images.pexels.com/photos/2287310/pexels-photo-2287310.jpeg"></a>
+    <a class="carousel-item" href="#three!"><img class="responsive-img"
+        src="https://images.pexels.com/photos/987550/pexels-photo-987550.jpeg"></a>
+    <a class="carousel-item" href="#four!"><img class="responsive-img"
+        src="https://images.pexels.com/photos/772177/pexels-photo-772177.jpeg"></a>
+
+    <div class="row absoluto hide-on-med-and-down">
+      <div class="col s12 m4 l4">
+        <span class="card-title">LAS PALMAS, MEDELLÍN</span>
+        <p>
+          <i style="color: #BEA250; font-size: 16px" class="material-icons left">
+            location_on
+          </i>
+          <label style="background: white; color: white;">Ubication</label>
+        </p>
+        <p style="background: #99CA56; font-weight: bold; font-size: 12px;">
+          <i style="font-size: 16px; align-items: center" class="material-icons left">
+            attach_money
+          </i>
+          PRECIO
+        </p>
+        <p style="background-image: linear-gradient(to right, #284777, #146E99); font-size: 8px; text-align: center;
+                  color: darkgray">
+          DESCRIPTION
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="fixed-action-btn">
+    <a class="btn-floating" onclick="fab()">
+      <i style="background: #A8CE50; color: white;" class="material-icons">add</i>
+    </a>
+    <ul>
+      <li><a href="" target="_blank" class="btn-floating">
+          <img width="100%" height="auto" src="https://i.ibb.co/yh9x17R/wsp-ico.png" alt="wapp">
+        </a>
+      </li>
+      <li><a style="background: transparent;" href="" target="_blank" class="btn-floating">
+          <img width="100%" height="auto" src="https://i.ibb.co/VV80mL1/msn-ico.png" alt="msn">
+        </a>
+      </li>
+      <!-- <li><a href="http://facebook.com" target="_blank" class="btn-floating">
+        <img
+              widht="100%" height="auto" src="https://i.ibb.co/VV80mL1/msn-ico.png" alt="msn">
+            </a>
+          </li> -->
+    </ul>
+  </div>
+</section>
+
+<section id="tusitioIdeal" class="container-fluid" style="margin-top: -5px;">
+  <div class=" row">
+    <div class="col s12 m3 l3"></div>
+    <div class="col s12 m3 l3">
+      <h5 style="font-weight: bolder; font-size: 16px; letter-spacing: 3px;
+      margin-bottom: 10%; margin-top: 10%">BUSCAR PROPIEDADES PARA</h5>
+    </div>
+    <div style="margin-top: 30px" class="col s12 m3 l3">
+      <button class="btnVenta whenPressed">VENTA</button>
+      <button class="btnArriendo whenPressed">ARRIENDO</button>
+    </div>
+    <div class="col s12 m3 l3"></div>
+  </div>
+  <div class="row ventasLetras container" style="margin-bottom: -90px">
+    <input class="col s10 m2 l2" style="margin-right: 20px" placeholder="ÁREA">
+    <div class="col s10 m2 l2" style="margin-right: 20px; ">
+      <select class="estrato">
+        <option value="" disabled selected><span style="font-weight: bold;">ESTRATO</span></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+    </div>
+    <input class="col s10 m2 l2" style="margin-right: 20px" placeholder="UBICACIÓN">
+    <input class="col s10 m2 l2" placeholder="ÁREA">
+  </div>
+  <div class="row ventasLetras container">
+    <div class="col s10 m2 l2" style="margin-right: 20px">
+      <select class="HABITACIONES">
+        <option value="" disabled selected><small style="font-weight: bold;">HABITACIONES</small></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <div class="col s10 m2 l2" style="margin-right: 20px">
+      <select class="BAÑOS">
+        <option value="" disabled selected><span style="font-weight: bold;">BAÑOS</span></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+    </div>
+    <input class="col s10 m2 l2 palabrasC" style="margin-right: 20px; font-size: 9px" placeholder="(PALABRAS CLAVE 1)">
+    <input class="col s10 m2 l2 palabrasC" style="font-size: 9px" placeholder="(PALABRAS CLAVE 2)">
+  </div>
+</section>
+<section>
+  <div class="range row center-align">
+    <div class="col s12 m2 l2"></div>
+    <div class="col s12 m4 l4 center-align custom-slider" style="margin-bottom: 50px; margin-left: 15px;">
+      <!-- <div class="center-align" id="sliderPrecio"></div>
+      <div class="row valores">
+        <div class="col s3 m3 l3" style="margin-right: 90%;"></div>
+        <div class="col s3 m3 l3">VALOR 2</div>
+      </div> -->
+      <ng5-slider id="slider" [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>
+    </div>
+    <div class="col s12 m4 l4 left-align">
+      <button style="cursor: pointer" class="btnBuscar" [routerLink]="['/busqueda']">BUSCAR</button>
+    </div>
+    <div class="col s12 m2 l2"></div>
+  </div>
+</section>
+
+<section id="valores" class="sctValores">
+  <div class="row">
+    <div class="col s12 m10 l4">
+      <h4 style="color: #D09F23; margin-bottom: 20px; font-weight: bolder">Valores Corporativos</h4>
+      <h5 style="color: #D09F23; font-weight: bolder">¿Quiénes somos?</h5>
+      <p style="font-size: 20px; text-align: justify;">
+        Somos un grupo empresarial conformado por profesionales con más de 15
+        años de experiencia en el mercado con temas relacionados con propiedad raíz,
+        marketing, ventas, administración de propiedades, consultorías,
+        entrenamientos comerciales y transformación de espacios.
+      </p>
+      <h5 style="color: #D09F23; font-weight: bolder">Misión</h5>
+      <p style="font-size: 20px; text-align: justify;">
+        Convertir a nuestros clientes en socios estratégicos, buscando afianzar
+        relaciones a largo plazo para el cumplimiento de objetivos comunes, prestando
+        un servicio diferencial y personalizado.
+      </p>
+      <h5 style="color: #D09F23; font-weight: bolder">Visión</h5>
+      <p style="font-size: 20px; text-align: justify;">
+        Revolucionaremos la industria con un portafolio integral y competitivo siendo
+        reconocidos como la empresa líder en innovación, tecnología y servicio,
+        saliéndonos del esquema tradicional para generar valor y dejar huella.
+      </p>
+      <h5 style="color: #D09F23; font-weight: bolder">Propósito</h5>
+      <p style="font-size: 20px; text-align: justify;">
+        ¡Transformar positivamente la vida de nuestros clientes!
+      </p>
+    </div>
+    <div class="col m8 hide-on-med-and-down" style="margin-top: 25px;">
+      <img src="../../../assets/images/ProyectosNuevos-03.png" height="800" width="90%" alt="quienessomos">
+    </div>
+  </div>
+</section>
+
+<section id="servicios" class="center-align" style="margin-top: -5px; ">
+  <div class="">
+    <h1 class="center-align" style="font-size: 32px; font-weight: bold; letter-spacing: 5px; margin-bottom: 5%;">
+      SERVICIOS
+      <hr class="separador">
+    </h1>
+    
+  </div>
+  
+  <div class="center-align row">
+    <div class="col s12 m12 l3">
+      <!-- <h4 class="titulosServ">
+        <i style="color:#BEA250;" class="material-icons left">
+          home
+        </i>
+        VENTA
+      </h4>
+      <p class="contServ">
+        Encuentra con nosotros tu espacio y conviértelo en tu hogar.
+      </p>
+      <p class="contServ">-USADOS</p>
+      <p class="contServ">-NUEVOS</p>
+      <p class="contServ">-LOCALES</p> -->
+
+
+      <div class="card cdServ">
+        <div class="card-content white-text">
+          <span class="card-title">VENTA</span>
+          <p style="font-size: 20px">Encuentra con nosotros tu espacio y conviértelo en tu hogar. Porque sabemos que
+            eres único, entendemos que
+            hay un lugar solo para ti.</p>
+          <p>-USADOS</p>
+          <p>-NUEVOS</p>
+          <p>-LOCALES</p>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="col s12 m12 l3">
+      <!-- <h4 class="titulosServ">
+        <i style="color:#BEA250;" class="material-icons">
+          domain
+        </i>
+        ARRIENDO
+      </h4>
+      <p class="contServ">Encuentra con nosotros tu lugar ideal y vive la maravillosa experiencia de volver a comenzar
+        las veces que sean necesarias hasta encontrar tu casa ideal.</p>
+        <p class="contServ">-AIRBNB</p>
+        <p class="contServ">-AMOBLADOS</p>
+        <p class="contServ">-TRADICIONAL</p> -->
+
+
+      <div class="card cdServ">
+        <div class="card-content white-text">
+          <span class="card-title">ARRIENDO</span>
+          <p style="font-size: 20px">Encuentra con nosotros tu lugar ideal y vive la maravillosa experiencia de volver a
+            comenzar las veces
+            que sean necesarias hasta encontrar tu casa ideal.</p>
+          <p>-AIRBNB</p>
+          <p>-AMOBLADOS</p>
+          <p>-TRADICIONAL</p>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="col s12 m12 l3">
+      <!-- <h4 class="titulosServ">
+        <i style="color:#BEA250;" class="material-icons">
+          location_city
+        </i>
+        TRANSFORMACIÓN DE ESPACIOS
+      </h4>
+      <p class="contServ">Reinventa todo en tu vivienda de la mano con nuestro equipo de expertos. Desde remodelaciones
+        básicas hasta modificaciones en la infraestructura.</p> -->
+
+      <div class="card cdServ">
+        <div class="card-content white-text">
+          <span class="card-title">TRANSFORMACIÓN DE ESPACIOS</span>
+          <p style="font-size: 20px">Reinventa todo en tu vivienda de la mano con nuestro equipo de expertos. Desde
+            remodelaciones básicas hasta
+            modificaciones en la infraestructura.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 m12 l3">
+      <div class="card cdServ">
+        <div class="card-content white-text">
+          <span class="card-title">CONSULTORÍAS EMPRESARIALES</span>
+          <p style="font-size: 20px">Estudios de mercadeo, planeación estratégica diagnóstico y ejecución enfocados en
+            el incremento constante
+            de empresas y personas naturales.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="row">
+    <div class="col s12 m4 l4">
+      <h4 class="titulosServ">
+        <i style="color:#BEA250;" class="material-icons">
+          search
+        </i>
+        CONSULTORÍAS EMPRESARIALES
+      </h4>
+      <p class="contServ">Estudios de mercadeo, planeación estratégica, diagnóstico y ejecución enfocado en el
+        incremento constante de empresas y personas naturales.</p>
+    </div> -->
+  <!-- <div class="col s12 m4 l4">
+      <h4 class="titulosServ">
+        <i style="color:#BEA250;" class="material-icons">
+          card_membership
+        </i>
+        ENTRENAMIENTOS COMERCIALES <span style="font-size: 10px;"></span>
+      </h4>
+      <p class="contServ">Formamos tu equipo de ventas bajo estrategias alcanzables medibles y realista para impactar
+        positivamente tu compañía</p>
+    </div> -->
+  <!-- </div> -->
+</section>
+
+<section id="zona-activa">
+  <h4 class="center-align" style="margin-top: 5%; font-weight: bolder; font-size: 36px">ZONA ACTIVA</h4>
+  <div class="container zonaActiva" style="background-color: white; color: black; font-weight: bold">
+    <p class="center-align textoZona" style="font-size: 30px">
+      Espera pronto un espacio donde podrás interactuar y disfrutar de los beneficios que el club ACTIVO URBANO tiene
+      para ti.
+    </p>
+  </div>
+</section>
+
+<section class="container center-align" style="margin-top: 10%; ">
+  <div class="row">
+    <div class="col s12 m4 l4 center-align">
+      <p style="font-size: 19px; letter-spacing: 3px; font-weight: bold; margin-top: 5px;">DESCARGA NUESTRO PORTAFOLIO
+      </p>
+    </div>
+    <div class="col s12 m6 l6 center-align">
+      <input class="inputUnirme" type="text" placeholder="Correo">
+    </div>
+    <div class="col s12 m2 l2 unirmeIzquierda">
+      <button class="btnUnirme">UNIRME</button>
+    </div>
+  </div>
+</section>
+
+<section class="proyectosNuevos container-fluid" style="margin-top: 10%">
+  <h1 class="center-align" style="font-size: 32px; font-weight: bold; letter-spacing: 5px; margin-bottom: 10%;">
+    PROYECTOS NUEVOS</h1>
+    <div class="row" style="margin-top: -30px;">
+        <div class="col s12 m4 l4">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <!-- <img class="activator" src="https://i.ibb.co/1snK2xs/cardhouse2.jpg"> -->
+              <div class="carousel carousel-slider" style="margin-bottom: -60%">
+                <a class="carousel-item"><img class="activator" src="../../../assets/images/ProyectosNuevos-01.png"></a>
+                <a class="carousel-item"><img class="activator" src="../../../assets/images/ProyectosNuevos-02.png"></a>
+                <a class="carousel-item"><img class="activator" src="../../../assets/images/cardhouse1.jpg"></a>
+                <a class="carousel-item"><img class="activator" src="../../../assets/images/quienessomos.jpg"></a>
+              </div>
+            </div>
+            <div class="card-content" style="margin-top: -20px;">
+              <span class="card-title activator grey-text text-darken-4">LAURELES, MEDELLÍN<i
+                  class="material-icons right">add</i></span>
+              <p><a
+                  style="font-weight: bold; color: #1B1A1B; background-image: linear-gradient(to right,#D09F23, #E0D2AF );">300.500.000</a>
+              </p>
+              <br>
+              <P><a style="font-weight: bold; color: #1B1A1B;">VENTA</a></P>
+              <!-- <div class="row"
+                style="font-size: 12px; background-image: linear-gradient(to right, #E0D2AF, #D09F23); color: black; font-weight: bold; margin-bottom: -20px;">
+                <div class="col s3">
+                  <p>AREA</p>
+                  <p>240 m2</p>
+                </div>
+                <div class="col s3">
+                  <p>HAB</p>
+                  <p>3</p>
+                </div>
+                <div class="col s3">
+                  <p>BAÑOS</p>
+                  <p>3</p>
+                </div>
+                <div class="col s3">
+                  <p>GARAJE</p>
+                  <p>1</p>
+                </div>
+              </div> -->
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">LAURELES, MEDELLÍN
+                <i class="material-icons right">close</i>
+              </span>
+              <p>
+                <a style="font-weight: bold; color: #1B1A1B;">
+                  Diagonal 74B, San Joaquín, Comuna 11 - Laureles-Estadio, Zona
+                  Urbana Medellín, Medellín, Valle de Aburrá, Antioquia, 0500, Colombia
+                </a>
+              </p>
+              <p>
+                <a style="font-weight: bold; color: #1B1A1B;">
+                  <i class="material-icons left">settings_overscan</i>150 Metros cuadrados
+                </a>
+              </p>
+              <p>
+                <a style="font-weight: bold; color: #1B1A1B;">
+                  <i class="material-icons left">hotel</i>3 Habitaciones
+                </a>
+              </p>
+              <p>
+                <a style="font-weight: bold; color: #1B1A1B;">
+                  <i class="material-icons left">wc</i>3 Cuartos de baño
+                </a>
+              </p>
+              <p>
+                <a style="font-weight: bold; color: #1B1A1B;">
+                  <i class="material-icons left">drive_eta</i>1 Garaje
+                </a>
+              </p>
+              <p>
+                <a style="font-weight: bold; color: #1B1A1B;">
+                  <i class="material-icons left">phone_in_talk</i>+57 320 788 1094
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4 l4">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <!-- <img class="activator" src="https://i.ibb.co/1snK2xs/cardhouse2.jpg"> -->
+              <div class="carousel carousel-slider" style="margin-bottom: -60%">
+                <a class="carousel-item"><img class="activator" src="../../../assets/images/ProyectosNuevos-01.png"></a>
+                <a class="carousel-item"><img class="activator" src="../../../assets/images/ProyectosNuevos-02.png"></a>
+                <a class="carousel-item"><img class="activator" src="../../../assets/images/cardhouse1.jpg"></a>
+                <a class="carousel-item"><img class="activator" src="../../../assets/images/quienessomos.jpg"></a>
+              </div>
+            </div>
+            <div class="card-content" style="margin-top: -20px;">
+              <span class="card-title activator grey-text text-darken-4">EL POBLADO, MEDELLÍN<i
+                  class="material-icons right">add</i></span>
+              <p><a
+                  style="font-weight: bold; color: #1B1A1B; background-image: linear-gradient(to right, #D09F23, #E0D2AF);">2.500.000</a>
+              </p>
+              <br>
+              <P><a style="font-weight: bold; color: #1B1A1B;">ARRIENDO</a></P>
+              <!-- <div class="row"
+                style="font-size: 12px; background-image: linear-gradient(to right, #E0D2AF, #D09F23); color: black; font-weight: bold; margin-bottom: -20px;">
+                <div class="col s3">
+                  <p>AREA</p>
+                  <p>240 m2</p>
+                </div>
+                <div class="col s3">
+                  <p>HAB</p>
+                  <p>3</p>
+                </div>
+                <div class="col s3">
+                  <p>BAÑOS</p>
+                  <p>3</p>
+                </div>
+                <div class="col s3">
+                  <p>GARAJE</p>
+                  <p>1</p>
+                </div>
+              </div> -->
+            </div>
+            <div class="card-reveal">
+              <div>
+                <span class="card-title grey-text text-darken-4">EL POBLADO, MEDELLÍN<i
+                    class="material-icons right">close</i></span>
+                <p>
+                  <a style="font-weight: bold; color: #1B1A1B;">
+                    Diagonal 74B, San Joaquín, Comuna 11 - Laureles-Estadio, Zona
+                    Urbana Medellín, Medellín, Valle de Aburrá, Antioquia, 0500, Colombia
+                  </a>
+                </p>
+                <p>
+                  <a style="font-weight: bold; color: #1B1A1B;">
+                    <i class="material-icons left">settings_overscan</i>150 Metros cuadrados
+                  </a>
+                </p>
+                <p>
+                  <a style="font-weight: bold; color: #1B1A1B;">
+                    <i class="material-icons left">hotel</i>3 Habitaciones
+                  </a>
+                </p>
+                <p>
+                  <a style="font-weight: bold; color: #1B1A1B;">
+                    <i class="material-icons left">wc</i>3 Cuartos de baño
+                  </a>
+                </p>
+                <p>
+                  <a style="font-weight: bold; color: #1B1A1B;">
+                    <i class="material-icons left">drive_eta</i>1 Garaje
+                  </a>
+                </p>
+                <p>
+                  <a style="font-weight: bold; color: #1B1A1B;">
+                    <i class="material-icons left">phone_in_talk</i>+57 320 788 1094
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4 l4">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <!-- <img class="activator" src="https://i.ibb.co/1snK2xs/cardhouse2.jpg"> -->
+              <div class="carousel carousel-slider" style="margin-bottom: -60%">
+                <a class="carousel-item"><img class="activator" src="../../../assets/images/ProyectosNuevos-01.png"></a>
+                <a class="carousel-item"><img class="activator" src="../../../assets/images/ProyectosNuevos-02.png"></a>
+                <a class="carousel-item"><img class="activator" src="../../../assets/images/cardhouse1.jpg"></a>
+                <a class="carousel-item"><img class="activator" src="../../../assets/images/quienessomos.jpg"></a>
+              </div>
+            </div>
+            <div class="card-content" style="margin-top: -20px;">
+              <span class="card-title activator grey-text text-darken-4">LAS PALMAS, MEDELLÍN<i
+                  class="material-icons right">add</i></span>
+              <p><a
+                  style="font-weight: bold; color: #1B1A1B; background-image: linear-gradient(to right, #D09F23, #E0D2AF);">300.500.000</a>
+              </p>
+              <br>
+              <P><a style="font-weight: bold; color: #1B1A1B;">VENTA</a></P>
+            </div>
+            <div class="card-reveal" style="margin-bottom: -30px">
+              <span class="card-title grey-text text-darken-4">LAS PALMAS, MEDELLÍN
+                <i class="material-icons right">close</i>
+              </span>
+              <p>
+                <a style="font-weight: bold; color: #1B1A1B;">
+                  Diagonal 74B, San Joaquín, Comuna 11 - Laureles-Estadio, Zona
+                  Urbana Medellín, Medellín, Valle de Aburrá, Antioquia, 0500, Colombia
+                </a>
+              </p>
+              <p>
+                <a style="font-weight: bold; color: #1B1A1B;">
+                  <i class="material-icons left">settings_overscan</i>150 Metros cuadrados
+                </a>
+              </p>
+              <p>
+                <a style="font-weight: bold; color: #1B1A1B;">
+                  <i class="material-icons left">hotel</i>3 Habitaciones
+                </a>
+              </p>
+              <p>
+                <a style="font-weight: bold; color: #1B1A1B;">
+                  <i class="material-icons left">wc</i>3 Cuartos de baño
+                </a>
+              </p>
+              <p>
+                <a style="font-weight: bold; color: #1B1A1B;">
+                  <i class="material-icons left">drive_eta</i>1 Garaje
+                </a>
+              </p>
+              <p>
+                <a style="font-weight: bold; color: #1B1A1B;">
+                  <i class="material-icons left">phone_in_talk</i>+57 320 788 1094
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+  <!-- <div class="row">
+    <div class="col s12 m4 l4 box center-align">
+      <img class="card-fondo" width="270px" height="320px" src="https://i.ibb.co/1snK2xs/cardhouse2.jpg" alt="">
+      <div class="text">
+        <p
+          style="font-size: 14px; background-image: linear-gradient(to right, #E0D2AF, #D09F23); color: black; font-weight: bold;">
+          $300,500,000</p>
+        <p style="background: white; color: black; font-size: 12px; font-weight: bold;">VENTA</p>
+        <p style="font-size: 18px; font-weight: bold; color: black; margin-top: -5px; border-color: #1B1A1B">LA CALERA,
+          MEDELLIN</p>
+      </div>
+    </div>
+    <div class="col s12 m4 l4 box center-align">
+      <img class="card-fondo" width="270px" height="320px" src="https://i.ibb.co/1snK2xs/cardhouse2.jpg" alt="">
+      <div class="text">
+        <p
+          style="font-size: 14px; background-image: linear-gradient(to right, #E0D2AF, #D09F23); color: black; font-weight: bold;">
+          $2,500,000</p>
+        <p style="background: white; color: black; font-size: 12px; font-weight: bold;">ARRIENDO</p>
+        <p style="font-size: 18px; font-weight: bold; color: black; margin-top: -5px; border-color: #1B1A1B">EL POBLADO,
+          MEDELLÍN</p>
+        <div class="row"
+          style="font-size: 12px; background-image: linear-gradient(to right, #E0D2AF, #D09F23); color: black; font-weight: bold; margin-top: -20px;">
+          <div class="col s3">
+            <p>AREA</p>
+            <p>240 m2</p>
+          </div>
+          <div class="col s3">
+            <p>HAB</p>
+            <p>3</p>
+          </div>
+          <div class="col s3">
+            <p>BAÑOS</p>
+            <p>3</p>
+          </div>
+          <div class="col s3">
+            <p>GARAJE</p>
+            <p>1</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m4 l4 box center-align">
+      <img class="card-fondo" width="270px" height="320px" src="https://i.ibb.co/1snK2xs/cardhouse2.jpg" alt="">
+      <div class="text">
+        <p
+          style="font-size: 14px; background-image: linear-gradient(to right, #E0D2AF, #D09F23); color: black; font-weight: bold;">
+          $300,500,000</p>
+        <p style="background: white; color: black; font-size: 12px; font-weight: bold;">VENTA</p>
+        <p style="font-size: 18px; font-weight: bold; color: black; margin-top: -5px; border-color: #1B1A1B">LAS PALMAS,
+          MEDELLÍN</p>
+      </div>
+    </div>
+  </div> -->
+</section>
+
+
+<section id="blog" class="container-fluid">
+  <h1 class="center-align" style="font-size: 32px; font-weight: bold; letter-spacing: 5px; margin-bottom: 10%;">BLOG
+  </h1>
+  <div class="row" style="margin-top: -30px;">
+    <div class="col s12 m1 l1 hide-on-med-and-down"></div>
+    <div class="col s12 m5 l5 center-align" style="margin-bottom: 20px">
+      <div>
+        <iframe class="card-blog" src="http://www.activourbano.com.co/4-claves-para-vender-tu-casa-mas-rapido/" frameborder="0" style="border:0">
+        </iframe>
+      </div>
+      <p>MAYO 14, 2019</p>
+      <p>QUIERO ARRENDAR MI PROPIEDAD, ¿CUÁNTO ES LO QUE RECOMIENDAN?</p>
+    </div>
+    <div class="col s12 m5 l5 center-align">
+      <div>
+        <iframe class="card-blog" src="http://www.activourbano.com.co/como-calcular-el-valor-de-arriendo-de-un-inmueble-en-colombia/" frameborder="0" style="border:0">
+        </iframe>
+      </div>
+      <p>JUNIO 15, 2019</p>
+      <p>¿MEJOR MOMENTO PARA VENDER MI PROPIEDAD?</p>
+    </div>
+    <div class="col s12 m1 l1 center-align"></div>
+  </div>
+</section>
+
+<section id="contacto" class="container-fluid">
+  <div class="">
+    <h1 class="center-align" style="font-size: 32px; font-weight: bold; letter-spacing: 5px; margin-bottom: 5%;">
+      CONTACTO
+    </h1>
+  </div>
+  <div class="row">
+    <div class="col s12 m6 l6 map-responsive">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.5010138522002!2d-75.57606948585092!3d6.197435228588774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e468287fb441239%3A0x77ad460dda84a93c!2sCl.+7+Sur+%2342-145%2C+Medell%C3%ADn%2C+Antioquia!5e0!3m2!1ses-419!2sco!4v1560879565267!5m2!1ses-419!2sco"
+        width="600" height="450" frameborder="0" style="border:0" allowfullscreen>
+      </iframe>
+    </div>
+    <div class="col s12 m6 l6" style="margin-top: 60px;">
+      <input type="text" placeholder="NOMBRE" class="inputContacto">
+      <input type="email" placeholder="CORREO" class="inputContacto">
+      <input type="number" placeholder="CELULAR" class="inputContacto">
+      <textarea name="description" id="description" cols="30" rows="50" class="txtContacto"></textarea>
+      <button class="btnUnirme">ENVIAR</button>
+    </div>
+  </div>
+</section>
+
+<section id="newsLetter" class="center-align container-fluid">
+  <div class="row">
+    <div class="col s12 m4 l4 center-align">
+      <img src="https://i.ibb.co/k5Y7hXj/logo.png" alt="logo">
+    </div>
+    <div class="col s12 m4 l4" style="text-align: center;">
+      <p style="font-weight: bold;">
+        SUSCRÍBETE A NUESTRO NEWSLETTER <br>
+        <small style="font-size: 18px">Entérate de nuestras últimas ofertas</small>
+      </p>
+      <div class="row center-align">
+        <div class="container col s12 m12 l12" style="margin-top: 30px">
+          <input class="inputUnirme" type="text" placeholder="Correo">
+        </div>
+        <div>
+          <button style="margin-top: 10%;" class="btnUnirme">
+            UNIRME
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m4 l4 center-align">
+      <p style="font-weight: bold; text-align: center;">INSTAGRAM FEED</p>
+      <iframe src="//lightwidget.com/widgets/40a7b9b8fa0e562ca4d6594d5024a84b.html" scrolling="no"
+        allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+ <p style="background-color: #1B1A1B; color: #807F80; font-weight: bold;">
+  Powered by Trascender Global. &copy;
+</p> 
+</footer>
+

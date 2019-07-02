@@ -1,0 +1,124 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./assets/css/materialize.min.css";
+@import "./assets/css/nouislider.min.css";
+
+@font-face {
+    font-family: 'Brandon';
+  src: url('./assets/fonts/BrandonGrotesque-Light.eot');
+  src: url('./assets/fonts/BrandonGrotesque-Light.eot?#iefix') format('embedded-opentype'),
+       url('./assets/fonts/BrandonGrotesque-Light.svg') format('svg'),
+       url('./assets/fonts/BrandonGrotesque-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'BrandonBold';
+  src: url('./assets/fonts/BrandonGrotesque-Bold.eot');
+  src: url('./assets/fonts/BrandonGrotesque-Bold.eot?#iefix') format('embedded-opentype'),
+       url('./assets/fonts/BrandonGrotesque-Bold.svg') format('svg'),
+       url('./assets/fonts/BrandonGrotesque-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+    font-family: Brandon;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1B1A1B;
+    color: white;
+}
+
+button {
+    cursor: pointer;
+}
+
+.ng5-slider-pointer-min{
+  background-image: -webkit-gradient(linear, left top, right top, from(#E0D2AF), to(#D09F23)) !important;
+  background-image: linear-gradient(to right, #E0D2AF, #D09F23) !important;
+  /* border-radius: 50% !important; */
+  /* width: 4% !important; */
+  /* /* margin-top: 10% !important; */ 
+  width: 20px !important;
+  height: 20px !important;
+  -moz-border-radius: 50% !important;
+  -webkit-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
+
+.ng5-slider-pointer-max{
+  background-image: -webkit-gradient(linear, left top, right top, from(#E0D2AF), to(#D09F23)) !important;
+  background-image: linear-gradient(to right, #E0D2AF, #D09F23) !important;
+  /* border-radius: 50% !important; */
+  /* width: 4% !important; */
+  /* margin-top: 10% !important; */
+  width: 20px !important;
+  height: 20px !important;
+  -moz-border-radius: 50% !important;
+  -webkit-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
+
+.ng5-slider-pointer{
+  padding-top: 20px !important;
+}
+
+.ng5-slider-span .ng5-slider-bar{
+  margin-top: -7px !important;
+}
+
+ng5sliderlabel{
+  margin-top: -5% !important;
+}
+.ng5-slider-span, .ng5-slider-bubble, .ng5-slider-model-high{
+  z-index: 0;
+}
+
+.custom-slider .ng5-slider .ng5-slider-selection {
+  background-image: -webkit-gradient(linear, left top, right top, from(#E0D2AF), to(#D09F23)) !important;
+  background-image: linear-gradient(to right, #E0D2AF, #D09F23) !important;
+  margin-top: -7px !important;
+}
+.ng5-slider-bubble{
+  top: 15px !important;
+  color: #A8A6A8 !important;
+  font-weight: bold !important;
+  font-family: Brandon !important;
+}
+
+.input-field {
+  overflow: hidden !important;
+  font-family: Brandon !important;
+  color: white !important;
+}
+
+@media (max-width: 500px) {
+  .ventasLetras input.palabrasC::-webkit-input-placeholder {
+    color: white;
+    font-size: 14px !important;
+  }
+  
+  .ventasLetras input.palabrasC:-ms-input-placeholder {
+    color: white;
+    font-size: 14px !important;
+  }
+  
+  .ventasLetras input.palabrasC::-ms-input-placeholder {
+    color: white;
+    font-size: 14px !important;
+  }
+  
+  .ventasLetras input.palabrasC::placeholder {
+    color: white;
+    font-size: 14px !important;
+  }
+}
+
+input {
+  color: white !important;
+  font-size: 14px !important;
+}

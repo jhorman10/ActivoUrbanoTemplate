@@ -1,0 +1,56 @@
+@media (max-width: 500px) {
+    .logoIzquierda {
+        margin-right: 35% !important;
+    }
+}
+
+
+
+.navegacion {
+    height: 200px;
+    background-color: #1B1A1B;
+}
+
+#nav-mobile li a:hover {
+    color: #D09F23;
+}
+
+.upBar {
+    margin-left: 15%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.derecha {
+    text-align: right;
+    /* padding-left: 55%; */
+    font-weight: bold;
+}
+
+.izquierda {
+    margin-left: 19%;
+    font-weight: bold;
+}
+
+.sidenav {
+    background-color: #1B1A1B;
+}
+
+.sidenav li a {
+    color:white !important;
+    font-weight: bold !important;
+}
+
+.letraNegrilla{
+font-weight: bold !important;
+color: black !important;
+}
+
+/* .brand-logo {
+    margin-top: -2.5%;
+} */
+
+/* #conocenos:hover {
+    transform: translate(0, 350px);
+} */
